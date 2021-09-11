@@ -1,5 +1,12 @@
 # 🚀 Git Cheat Sheet 🚀 <!-- omit in TOC -->
 
+
+<div align="center">
+
+![image](./git.png)
+
+</div>
+
 - [Setup](#setup)
 - [Setup & Init](#setup--init)
 - [stage & snapshot](#stage--snapshot)
