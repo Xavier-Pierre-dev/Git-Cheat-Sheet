@@ -534,8 +534,21 @@ graph TB
 
 <div align="center">
 
-![image](./flow_chart.svg)
-
+```mermaid
+graph TB
+    1[Check list of branch : <br> git branch -a ] -->2[Create a new branch Develop and switch to the branch : <br> git checkout -b new branch Develop]
+    2 --> 3[switch to the branch Dev2 : <br> git checkout Dev2]
+    3-->4[check the status for all files inside the current branch : <br> git status <br> <br> You can also handled files with : <br>  use : git add <file>...  to update what will be committed <br> use git restore <file>... to discard changes in working directory ]
+    4-->5["To stash your working directory including untracked files (especially those that are in the .gitignore) : <br> git stash --include-untracked"]
+    5-->6[check the status for all files inside the current branch : <br> git status]
+    6-->7[switch to Develop branch <br> git checkout Develop]
+    7-->12[write working from top of stash stack <br> git stash pop]
+    12-->8[update all changement : <br> git add .]
+    8-->9[check the status for all files inside the current branch : <br> git status]
+    9-->10[commit your changement locally : <br> git commit]
+    10-->11[push your changement online : <br> git push <br><br> When it's a new branch that you create locally and want to push it to our repository online then you need to : <br> git push --set-upstream origin Develop <br> because in this case the current branch Develop has no upstream branch.]
+```    
+    
 </div>
 
 <br>
